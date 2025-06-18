@@ -15,7 +15,7 @@ void main() {
               'Ay',
               style: TextStyle(
                 fontSize: 24,
-                color: Colors.lightBlue[800],
+                color: Colors.lightBlue[900],
                 fontWeight: FontWeight.w600,
                   fontFamily: 'Courier New'
               ),
