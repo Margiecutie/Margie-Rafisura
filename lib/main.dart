@@ -3,40 +3,42 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
+      backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
-        title: Text('Expense Tracker'),
-        backgroundColor: Colors.pink[300],
+        title: Text(
+          'Profile Info',
+          style: TextStyle(
+            fontFamily: 'Times New Roman',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic,
+          ),
+        ),
+        backgroundColor: Colors.pink,
       ),
-      body: Center(
+      body: Padding(
+        padding: EdgeInsets.all(16),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Ay',
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.lightBlue[900],
-                fontWeight: FontWeight.w600,
-                  fontFamily: 'Courier New'
-              ),
+            buildRow(
+              'Name:',
+              'Margie J. Rafisura',
+              Color(0xFFFFE0E0), // pas
+              Color(0xFFFFF5CC),
             ),
-            Text(
-              'Wow',
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.purple[800],
-                fontWeight: FontWeight.w600,
-                fontFamily: 'Times New Roman'
-              ),
+            SizedBox(height: 10),
+            buildRow(
+              'Age:',
+              '21 years old',
+              Color(0xFFDCF8C6),
+              Color(0xFFD1C4E9),
             ),
-            Text(
-              'Ang Galing',
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.green[800],
-                fontWeight: FontWeight.w600,
-                  fontFamily: 'Arial'
-              ),
+            SizedBox(height: 10),
+            buildRow(
+              'Gender:',
+              'Female',
+              Color(0xFFB2EBF2),
+              Color(0xFFF8BBD0),
             ),
           ],
         ),
@@ -44,3 +46,44 @@ void main() {
     ),
   ));
 }
+
+Widget buildRow(String label, String value, Color labelColor, Color valueColor) {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      Container(
+        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        decoration: BoxDecoration(
+          color: labelColor,
+          border: Border.all(color: Colors.black),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+            fontFamily: 'Times New Roman',
+            fontSize: 18,
+            color: Colors.black,
+          ),
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        decoration: BoxDecoration(
+          color: valueColor,
+          border: Border.all(color: Colors.black),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Text(
+          value,
+          style: TextStyle(
+            fontFamily: 'Times New Roman',
+            fontSize: 18,
+            color: Colors.black,
+          ),
+        ),
+      ),
+    ],
+  );
+}
+
