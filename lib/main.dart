@@ -1,89 +1,190 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      backgroundColor: Colors.lightBlue[50],
+  runApp(MaterialApp(home: Profile()));
+}
+
+class Profile extends StatelessWidget {
+  const Profile({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Profile Info',
+          'Profile',
           style: TextStyle(
-            fontFamily: 'Times New Roman',
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
+            color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.pink,
+        backgroundColor: const Color.fromARGB(255, 146, 11, 214),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16),
+      body: Container(
+        margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
         child: Column(
           children: [
-            buildRow(
-              'Name:',
-              'Margie J. Rafisura',
-              Color(0xFFFFE0E0), // pas
-              Color(0xFFFFF5CC),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    child: Text(
+                      'User Profile',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            SizedBox(height: 10),
-            buildRow(
-              'Age:',
-              '21 years old',
-              Color(0xFFDCF8C6),
-              Color(0xFFD1C4E9),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.person,
+                    size: 80,
+                  )
+                ],
+              ),
             ),
-            SizedBox(height: 10),
-            buildRow(
-              'Gender:',
-              'Female',
-              Color(0xFFB2EBF2),
-              Color(0xFFF8BBD0),
-            ),
+            Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.fromLTRB(30, 20, 0, 0),
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Text(
+                          'Name:',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            fontFamily: 'Times New Roman',
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        child: Text('Margie Rafisura:'),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(30, 10, 0, 0),
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Text(
+                          'Email:',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            fontFamily: 'Times New Roman',
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        child: Text('margie03@gmail.com'),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(30, 10, 0, 0),
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Text(
+                          'Company:',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            fontFamily: 'Times New Roman',
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        child: Text('Batangas State University TNEU Balayan'),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(30, 10, 0, 0),
+                        child: Text(
+                          'Contact Number:',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            fontFamily: 'Times New Roman',
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        child: Text('09926294124'),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0, 250, 0, 0),
+                        width: 300,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Logout',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromARGB(255, 146, 11, 214)),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
-    ),
-  ));
+    );
+  }
 }
-
-Widget buildRow(String label, String value, Color labelColor, Color valueColor) {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      Container(
-        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-        decoration: BoxDecoration(
-          color: labelColor,
-          border: Border.all(color: Colors.black),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Text(
-          label,
-          style: TextStyle(
-            fontFamily: 'Times New Roman',
-            fontSize: 18,
-            color: Colors.black,
-          ),
-        ),
-      ),
-      Container(
-        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-        decoration: BoxDecoration(
-          color: valueColor,
-          border: Border.all(color: Colors.black),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Text(
-          value,
-          style: TextStyle(
-            fontFamily: 'Times New Roman',
-            fontSize: 18,
-            color: Colors.black,
-          ),
-        ),
-      ),
-    ],
-  );
-}
-
