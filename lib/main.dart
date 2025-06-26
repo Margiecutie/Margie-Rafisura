@@ -12,12 +12,13 @@ class Profile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Profile',
+          'Grow A Garden Pet Info',
           style: TextStyle(
             color: Colors.white,
           ),
         ),
-        backgroundColor: const Color.fromARGB(255, 146, 11, 214),
+        backgroundColor: const Color.fromARGB(255, 50, 166, 5),
+        centerTitle: true,
       ),
       body: Container(
         margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
@@ -27,161 +28,128 @@ class Profile extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    child: Text(
-                      'User Profile',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  Icon(
+                    Icons.person,
+                    size: 180,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'All',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  SizedBox(width: 40),
+                  Text(
+                    'Common',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  SizedBox(width: 40),
+                  Text(
+                    'Uncommon',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
                     ),
                   ),
                 ],
               ),
             ),
             Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+              child: Column(
                 children: [
-                  Icon(
-                    Icons.person,
-                    size: 80,
-                  )
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Icon(
+                            Icons.person,
+                            size: 120,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Common',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(width: 40),
+                      Column(
+                        children: [
+                          Icon(
+                            Icons.person,
+                            size: 120,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Uncommon',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Icon(
+                            Icons.person,
+                            size: 120,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Uncommon',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(width: 40),
+                      Column(
+                        children: [
+                          Icon(
+                            Icons.person,
+                            size: 120,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Common',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
-            Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.fromLTRB(30, 20, 0, 0),
-                  child: Row(
-                    children: [
-                      Container(
-                        child: Text(
-                          'Name:',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: 'Times New Roman',
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.fromLTRB(30, 0, 0, 0),
-                        child: Text('Margie Rafisura:'),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(30, 10, 0, 0),
-                  child: Row(
-                    children: [
-                      Container(
-                        child: Text(
-                          'Email:',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: 'Times New Roman',
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.fromLTRB(30, 0, 0, 0),
-                        child: Text('margie03@gmail.com'),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(30, 10, 0, 0),
-                  child: Row(
-                    children: [
-                      Container(
-                        child: Text(
-                          'Company:',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: 'Times New Roman',
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.fromLTRB(30, 0, 0, 0),
-                        child: Text('Batangas State University TNEU Balayan'),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.fromLTRB(30, 10, 0, 0),
-                        child: Text(
-                          'Contact Number:',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: 'Times New Roman',
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.fromLTRB(30, 0, 0, 0),
-                        child: Text('09926294124'),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  child: Column(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0, 250, 0, 0),
-                        width: 300,
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Logout',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  const Color.fromARGB(255, 146, 11, 214)),
-                        ),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            )
           ],
         ),
       ),
