@@ -23,8 +23,10 @@ class _listItemsState extends State<listItems> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.brown,
       appBar: AppBar(
         title: Text('Grow a Garden'),
+        backgroundColor: Colors.green,
       ),
       body: Column(
         children: pets.map((pet){
