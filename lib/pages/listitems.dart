@@ -23,6 +23,7 @@ class _listItemsState extends State<listItems> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.brown,
       appBar: AppBar(
         title: Text('Grow a Garden'),
@@ -33,6 +34,13 @@ class _listItemsState extends State<listItems> {
         return Itemcard(pets: pet);
     }).toList(),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.pushNamed(context, '/add');
+        },
+        child: Icon(Icons.add),
+      ),
     );
+
   }
 }
